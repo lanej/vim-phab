@@ -1,0 +1,14 @@
+*phab.txt*  fugitive.vim extension for Phabricator
+
+Author:  Josh Lane <http://lanej.io/>
+License: Same terms as Vim itself (see |license|)
+
+Use Fugitive's |:Gbrowse| to browse to the Phabricator URL for the current buffer.
+
+ABOUT                                           *phab-about*
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/lanej/vim-phab
+
+ vim:tw=78:et:ft=help:norl:
