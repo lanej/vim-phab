@@ -96,14 +96,14 @@ function! phab#FugitiveUrl(...) abort
     let url = substitute(root . '/tree/' . commit . '/' . path, '/$', '', 'g')
   elseif get(opts, 'type', '') ==# 'blob' || opts.path =~# '[^/]$'
     let escaped_commit = substitute(commit, '#', '%23', 'g')
-    let url = root . '/browse/' . path . ';' . escaped_commit
+    let url = root . '/browse/' . escaped_commit . '/' . path
     if get(opts, 'line2') && opts.line1 == opts.line2
       let url .= '$' . opts.line1
     elseif get(opts, 'line2')
       let url .= '$' . opts.line1 . '-' . opts.line2
     endif
   else
-    let url = root . '/commit/' . commit
+    let url = root . '/browse/' . commit . '/'
   endif
   return url
 endfunction
